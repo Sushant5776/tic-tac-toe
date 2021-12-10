@@ -1,20 +1,12 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useCallback } from "react"
 import "./App.css"
 
 const App = () => {
-  const [item, setItem] = useState({
-    1: "",
-    2: "",
-    3: "",
-    4: "",
-    5: "",
-    6: "",
-    7: "",
-    8: "",
-    9: "",
-  })
+  const [item, setItem] = useState({})
   const [currentPlayer, setCurrentPlayer] = useState("x")
   const isInitialMount = useRef(true)
+
+  const isFull = useCallback(() => Object.keys(item).length === 9, [item])
 
   const handleClick = (event) => {
     if (
@@ -40,8 +32,17 @@ const App = () => {
           setCurrentPlayer("x")
         }
       })
+
+      if (isFull()) {
+        alert("Oops! Match is tied! Better luck next time!")
+        setItem({})
+        setCurrentPlayer("x")
+        Array.from(document.getElementsByClassName("item")).map((element) =>
+          console.log(element.classList.remove("x", "o"))
+        )
+      }
     }
-  }, [item])
+  }, [item, isFull])
 
   return (
     <div className="app">
