@@ -1,0 +1,76 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color__white);
+}
+
+.app__heading {
+  color: var(--color__heading);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.board__wrapper,
+.board,
+.board__row {
+  width: max-content;
+  height: max-content;
+}
+
+.board__wrapper {
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6%;
+  background-color: var(--color__board);
+}
+
+.board {
+  border-collapse: collapse;
+}
+
+.board__row {
+  text-align: center;
+}
+
+.board__row > .item {
+  width: 7vw;
+  height: 7vw;
+  font-size: 3rem;
+}
+
+.item__left {
+  border-right: 1px solid var(--color__border);
+}
+
+.item__center {
+  border-left: 1px solid var(--color__border);
+  border-right: 1px solid var(--color__border);
+}
+
+.item__right {
+  border-left: 1px solid var(--color__border);
+}
+
+.item__top {
+  border-bottom: 1px solid var(--color__border);
+}
+
+.item__middle {
+  border-top: 1px solid var(--color__border);
+  border-bottom: 1px solid var(--color__border);
+}
+
+.item__bottom {
+  border-top: 1px solid var(--color__border);
+}
+
+.x {
+  color: var(--color__grape);
+}
+
+.o {
+  color: var(--color__amethystSmoke);
+}

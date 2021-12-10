@@ -1,19 +1,23 @@
 :root {
-  --color__grape: #492061;
-  --color__bonJour: #e3e2e3;
-  --color__amethystSmoke: #9c87ac;
-}
-
-html,
-body {
-  width: 100vw;
-  min-height: 100vh;
+  --color__grape: #948cff;
+  --color__amethystSmoke: #ee82f4;
+  --color__border: rgba(61, 57, 63, 0.1);
+  --color__white: #fff;
+  --color__board: #fdf7ff;
+  --color__heading: #ff909d;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100vw;
+  min-height: 100vh;
 }
 
 body {
